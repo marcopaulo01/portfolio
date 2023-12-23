@@ -6,6 +6,8 @@ import CalculatorPreview from '../assets/projects/calculator.png';
 import StudentEnrollmentPreview from '../assets/projects/Student-Enrollment App.png';
 import S3Preview from '../assets/projects/AWS S3 Management App.png';
 import PortfolioPreview from '../assets/projects/portfolio.png';
+import RealEstatePreview from '../assets/projects/RealEstate.png';
+import TutorPreview from '../assets/projects/tutor.png';
 import ClickMe from '../assets/projects/click.png'
 
 function Project(){
@@ -14,7 +16,10 @@ function Project(){
         Calculator: 'https://github.com/marcopaulo01/simpleCalculator',
         StudentEnrollment: 'https://github.com/marcopaulo01/springboot_enrollment',
         S3: 'https://github.com/marcopaulo01/AWS-Lab1',
-        Portfolio: 'https://github.com/marcopaulo01/portfolio'
+        Portfolio: 'https://github.com/marcopaulo01/portfolio',
+        RealEstate: 'https://github.com/marcopaulo01/realestateapi',
+        Tutor: 'https://github.com/marcopaulo01/springboot_tutor'
+
     };
 
     return(
@@ -66,7 +71,7 @@ function Project(){
                             <div className="content">
                                 <ul className="feature">
                                     <li>Developed an enterprise-level student enrollment system utilizing Spring Boot MVC 
-                                        and Spring Data JPA, ensuring seamless integration and efficient data handling.</li>
+                                        and Spring Data JPA, ensuring seamless integration and efficient data handling</li>
                                     <li>Successfully implemented CRUD functionalities for student registration, program
                                          selection, payment processing, and profile modification, ensuring complete data management</li>
                                     <li>Implemented robust form validations and error handling mechanisms both on the front-end 
@@ -90,6 +95,33 @@ function Project(){
                                 </ul>
                             </div>
                         </li>
+                        <li>
+                            <label for="fifth">Real Estate API with AWS DynamoDB<img src={ClickMe} alt="Click Me" /></label>
+                            <input type="radio" name="list" id='fifth' onChange={() => setSelectedProject('RealEstate')}/>
+                            <div className="content">
+                                <ul className="feature">
+                                    <li>ASP.NET Core for robust API development</li>
+                                    <li>Amazon DynamoDB as a NoSQL database for data storage</li>
+                                    <li>Utilizes built-in Swagger for API documentation</li>
+                                    <li>Implements HTTP methods (GET, POST, PUT, DELETE, PATCH) for full data management</li>
+                                    <li>CRUD functionalities for Realtor and Property entities</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="sixth">Tutor Management System<img src={ClickMe} alt="Click Me" /></label>
+                            <input type="radio" name="list" id='sixth' onChange={() => setSelectedProject('Tutor')}/>
+                            <div className="content">
+                                <ul className="feature">
+                                    <li>Developed a robust full-stack tutor management system leveraging Spring Boot Web Flux, MongoDB, and Thymeleaf technologies for comprehensive front and back-end functionalities</li>
+                                    <li>Engineered RESTful APIs handling tutors, subjects, students, and appointments, ensuring seamless communication between the front-end and back-end components</li>
+                                    <li>Implemented feature-rich CRUD operations for tutors, subjects, students, and appointments, providing comprehensive data management capabilities across the application</li>
+                                    <li>Ensured data integrity and user input correctness through meticulous form validations and error handling mechanisms. Employed Thymeleaf for front-end validations and MongoDB schema validations at the back end</li>
+                                    <li>Designed and optimized a structured MongoDB database encompassing collections for Tutors, Subjects, Students, and Appointments, enabling efficient data storage and retrieval</li>
+                                    <li>Seamlessly integrated Thymeleaf-based front-end components with the Spring Boot Web Flux back end, delivering an intuitive and interactive user experience</li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div className="project-preview">
@@ -97,6 +129,8 @@ function Project(){
                     {selectedProject === 'StudentEnrollment' && <img src={StudentEnrollmentPreview} alt="Student Enrollment Preview" />}
                     {selectedProject === 'S3' && <img src={S3Preview} alt="AWS S3 Preview" />}
                     {selectedProject === 'Portfolio' && <img src={PortfolioPreview} alt="Portfolio Preview" />}
+                    {selectedProject === 'RealEstate' && <img src={RealEstatePreview} alt="Real Estate Preview" />}
+                    {selectedProject === 'Tutor' && <img src={TutorPreview} alt="Tutor Preview" />}
                     {selectedProject && (
                         <p>
                             <a href={projectLinks[selectedProject]} target="_blank" rel="noopener noreferrer">
