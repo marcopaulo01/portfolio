@@ -7,16 +7,16 @@ import NavBar from "./componets/NavBar";
 
 function App() {
   return (
-  <Router>
-    <NavBar/>
-    <Routes>
-      <Route path='/' Component={Home} />
-      <Route path='/home' Component={Home} />
-      <Route path='/about' Component={About} />
-      <Route path='/projects' Component={Projects} />
-    </Routes>
-  </Router>
+    <Router>
+      <NavBar/>
+      <Routes>
+        <Route path='/portfolio' element={<Home />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/projects' element={<Projects />} />
+      </Routes>
+    </Router>
   )
 }
 
-export default App
+export default App;
