@@ -16,6 +16,9 @@ function NavBar(){
                     <Link to='/projects'>Projects</Link>
                 </li>
                 <li>
+                    <Link to='/skills'>Skills</Link>
+                </li>
+                <li>
                     <Link to='/about'>About Me</Link>
                 </li>
                 {/* Add a new list item for downloading resume with special class */}
